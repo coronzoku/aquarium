@@ -1,4 +1,7 @@
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class TalkChecker : MonoBehaviour
 {
@@ -6,15 +9,35 @@ public class TalkChecker : MonoBehaviour
     public Heroine talkableHeroine;
 
 
+    InputReader inputReader;
 
-    void Start()
+
+
+
+    private void Awake()
     {
-      
+        inputReader = GetComponent<InputReader>();
+        
     }
 
-
-    public void OnTriggerStay(Collider other)
+    private void Update()
     {
+        if (inputReader.inputActions.Player.Talk.WasPressedThisFrame())
+        {
+            Debug.Log("会話ボタンが押された");
+            StartTalk(talkableHeroine);
+
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Heroine"))
+        {
+            return;
+        }
+
         if (other.CompareTag("Heroine")) //タグがヒロインなら
         {
             Heroine target = other.gameObject.GetComponent<Heroine>();
@@ -22,14 +45,14 @@ public class TalkChecker : MonoBehaviour
 
             target.TalkMark.GetComponent<SpriteRenderer>().enabled = true;
 
+
+
         }
+    }
 
 
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-    
-    }
+
+
 
     public void OnTriggerExit(Collider other)
     {
@@ -43,4 +66,31 @@ public class TalkChecker : MonoBehaviour
 
     }
 
-}
+    private void StartTalk(Heroine target)
+    {
+       
+        GameManager.instance.ChangeState(GameState.Talking);
+        inputReader.SwitchToDialogue();
+        DialogManager.instance.StartDialogue(target);
+ 
+    }
+    public void EndTalk(Heroine target)
+    {
+        DialogManager.instance.EndDialogue(target);
+        inputReader.SwitchToPlayer();
+        GameManager.instance.ChangeState(GameState.Playing);
+
+
+
+    }
+
+
+
+
+
+    }
+
+
+
+
+

@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public bool isPlayable  = true;
+   
 
     #region　　【シングルトン】
     public static GameManager instance;
@@ -27,21 +27,38 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
+    public GameState CurerntState { get;  private set; } //プロパティ
+         = GameState.Playing;　//プレイング状態
 
-  
- 
 
-    public void PlayableStop()
+
+    public void ChangeState(GameState newState)
     {
-        isPlayable = false;
+        CurerntState = newState;
+
+        Debug.Log("現在の状態" +CurerntState);
     
-
-     }
-    public void ResumePlayable()
-    {
-
-        isPlayable = true;
+    
     }
+
+    public bool CanMove()
+    {
+        return CurerntState == GameState.Playing;
+    
+    }
+
+
+
+}
+
+public enum GameState
+{
+
+    Playing,
+    Talking,
+    Paused,
+
+    Event,
 
 
 }

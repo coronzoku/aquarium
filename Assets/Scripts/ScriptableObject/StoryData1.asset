@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: StoryData1
   m_EditorClassIdentifier: Assembly-CSharp::StoryData
   stories:
-  - CharacterImage: {fileID: 0}
-    Charactoranime: {fileID: 0}
-    StoryText: 
-    CharacterName: 
+  - CharacterImage: {fileID: -5297848505708554443, guid: 18640c4a54c86b846bf644f8d1cec414, type: 3}
+    StoryText: "\u3042\u3042\u3042\u3042\u3042\u3042\u3042"
+    CharacterName: "\u30A6\u30AB"
+  - CharacterImage: {fileID: -5297848505708554443, guid: 18640c4a54c86b846bf644f8d1cec414, type: 3}
+    StoryText: "\u3044\u3044\u3044\u3044\u3044\u3044\u3044"
+    CharacterName: "\u30A6\u30AB"

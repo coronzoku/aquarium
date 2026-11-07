@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
+
 
 [CreateAssetMenu(fileName = "StoryData", menuName = "Scriptable Objects/StoryData")]
 public class StoryData : ScriptableObject
@@ -12,7 +14,6 @@ public class StoryData : ScriptableObject
 public class Story
 {
     public Sprite CharacterImage;
-    public Animator Charactoranime;
 
     [TextArea]
     public string StoryText;
