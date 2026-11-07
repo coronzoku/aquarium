@@ -6,18 +6,14 @@ public class PlayerController : MonoBehaviour
 {
 
 
-    InputReader inputReader;
+    [SerializeField]InputReader inputReader;
 
     
 
-    [SerializeField] private float moveSpeed = 5f; //移動速度の数値を変数に代入
+    [SerializeField] private float moveSpeed = 5f; 
 
 
-    private void Awake()
-    {
-       inputReader = GetComponent<InputReader>();
-        
-    }
+
 
 
     private void Update()

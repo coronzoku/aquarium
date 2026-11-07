@@ -19,3 +19,6 @@ MonoBehaviour:
   - CharacterImage: {fileID: -5297848505708554443, guid: 18640c4a54c86b846bf644f8d1cec414, type: 3}
     StoryText: "\u3044\u3044\u3044\u3044\u3044\u3044\u3044"
     CharacterName: "\u30A6\u30AB"
+  - CharacterImage: {fileID: -5297848505708554443, guid: 18640c4a54c86b846bf644f8d1cec414, type: 3}
+    StoryText: "\u3046\u3046\u3046\u3046\u3046\u3046\u3046\u3046"
+    CharacterName: "\u30A6\u30AB"

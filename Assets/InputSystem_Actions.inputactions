@@ -536,6 +536,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Up",
+                    "id": "ddfc6978-af83-41fc-bb7c-eb6c5c92d2d6",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Down",
                     "id": "c4435881-2c9a-45d4-b0da-b1699ed5bc42",
                     "path": "<Keyboard>/s",
@@ -547,8 +558,30 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Down",
+                    "id": "8479e90d-05be-4730-8571-e257d0f4b797",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Left",
                     "id": "6d3d82d3-3b76-4523-82fe-fad09afc6437",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "e601e285-71ee-4ee3-be4a-5fe3267e1ac8",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -561,6 +594,17 @@
                     "name": "Right",
                     "id": "01733ba8-82d7-4ef1-88e3-71e39941feb2",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "1d5d6dc3-0f5b-4de5-ae1a-88568b01074a",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1134,6 +1178,35 @@
                     "processors": "",
                     "groups": "",
                     "action": "Scenario",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Dialogue",
+            "id": "b77b2b54-e0d9-44b9-8dbe-af1a00c2eb25",
+            "actions": [
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "1bb3725d-01c0-47a2-a7b4-868e46178926",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "33cef0fb-0539-4188-ad91-edb76cf5dce5",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

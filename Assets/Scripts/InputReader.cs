@@ -15,8 +15,19 @@ public class InputReader : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActions.Enable();
+        if (inputActions == null)
+        {
+            inputActions = new InputSystem_Actions();
 
+        }
+        inputActions.Player.Enable();
+
+    }
+
+    public bool WasNextPressed()
+    {
+        return inputActions.Dialogue.Next.WasPressedThisFrame();
+    
     }
 
     private void OnDisable()
@@ -28,13 +39,13 @@ public class InputReader : MonoBehaviour
     public void SwitchToDialogue()
     {
         inputActions.Player.Disable();
-        inputActions.UI.Enable();
+        inputActions.Dialogue.Enable();
     
     }
     public void SwitchToPlayer()
     {
-        inputActions.Player.Disable();
-        inputActions.UI.Enable();
+        inputActions.Dialogue.Disable();
+        inputActions.Player.Enable();
 
     }
 }
